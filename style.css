@@ -1,0 +1,211 @@
+/* ===============================
+   GLOBAL
+=================================*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   NAVBAR
+=================================*/
+.navbar {
+  background-color: #c4c4c4;
+  width: 100%;
+  min-height: 70px;
+}
+
+.logo-desktop {
+  height: 50px;
+}
+
+.logo-mobile {
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #71ffbd;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.menu_items {
+  padding-left: 70px;
+}
+
+/* ===============================
+   BUTTONS
+=================================*/
+.book_services {
+  background-color: #00ffbb;
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book_services:hover {
+  background-color: #008563;
+}
+
+.get_button {
+  background-color: #ebebeb;
+}
+
+.get_button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ===============================
+   CALL INFO
+=================================*/
+.call-box {
+  gap: 12px;
+}
+
+.call-icon {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #e5f3d6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-icon i {
+  color: #8dc63f;
+  font-size: 18px;
+}
+
+.call-text a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #8dc63f;
+  text-decoration: none;
+}
+
+.call-text a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   BANNER / CAROUSEL (FIXED)
+=================================*/
+.carousel,
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Desktop banner */
+.banner-img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* 🔥 MOBILE FIX – NO ZOOM */
+@media (max-width: 768px) {
+  .banner-img {
+    height: auto;          /* allow natural height */
+    max-height: 350px;     /* control banner size */
+    object-fit: contain;  /* FULL image visible */
+    background-color: #f8f9fa;
+  }
+}
+
+/* ===============================
+   SECTIONS
+=================================*/
+section {
+  padding: 60px 0;
+}
+
+.about-content p,
+.about-text p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.contact_us {
+  background-color: rgb(185, 185, 185);
+}
+
+.booking_bg {
+  background-color: #008563 !important;
+  border-style: none;
+}
+
+/* ===============================
+   MOBILE NAV FIXES
+=================================*/
+@media (max-width: 991px) {
+  .navbar {
+    height: auto;
+  }
+
+  .menu_items {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .nav-link::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ===============================
+   VERY SMALL DEVICES
+=================================*/
+@media (max-width: 480px) {
+  .call-text a {
+    font-size: 18px;
+  }
+}
+
+/* ===== MOBILE HORIZONTAL FIX ===== */
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
